@@ -1,0 +1,22 @@
+{
+    "debugMode"     : 1,
+    "showFPS"       : true,
+    "frameRate"     : 60,
+    "id"            : "gameCanvas",
+    "renderMode"    : 0,
+    "engineDir"     : "../../frameworks/cocos2d-html5/",
+
+    "modules"       : ["cocos2d"],
+
+    "jsList"        : [
+        "src/cc.js",
+        "src/tt.js",
+        "src/base/widget.js",
+        "src/base/widgetEvent.js",
+        "src/node/RectNode.js",
+        "src/node/BorderNode.js",
+        "src/widget/ImgWidget.js",
+        "src/widget/World2d.js",
+        "src/comp/InputComp.js"
+    ]
+}
