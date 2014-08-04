@@ -17,6 +17,7 @@
         "src/node/BorderNode.js",
         "src/widget/ImgWidget.js",
         "src/widget/World2d.js",
-        "src/comp/InputComp.js"
+        "src/comp/InputComp.js",
+        "src/comp/bindComp.js"
     ]
 }

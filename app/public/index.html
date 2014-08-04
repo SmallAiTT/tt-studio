@@ -10,7 +10,7 @@
         }
         .dragitem{
             border:1px solid #ccc;
-            width:50px;
+            width:100px;
             height:50px;
             margin-bottom:10px;
         }
@@ -25,23 +25,18 @@
     <link href="./lib/easyui/themes/icon.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-
 <div class="easyui-layout" style="width:1100px;height:968px;">
     <div data-options="region:'north'" style="height:50px"></div>
     <div data-options="region:'south',split:true" style="height:50px;"></div>
     <div data-options="region:'east',split:true" title="East" style="width:200px;">
-        <div id="panel" class="tt-panel">
-            <div class="tt-panel-title">Panel</div>
-            <div class="tt-panel-container"></div>
+        <div id="compPanelRoot" class="tt-panel">
         </div>
     </div>
     <div data-options="region:'west',split:true" title="West" style="width:200px;">
         <div class="easyui-accordion" data-options="fit:true,border:false">
             <div title="Title1" data-options="selected:true" style="padding:10px;">
                 <div style="float:left;width:200px;margin-right:20px;">
-                    <div class="dragitem" widget="tt.ImgWidget">Apple</div>
-                    <div class="dragitem" widget="tt.ImgWidget">Peach</div>
-                    <div class="dragitem" widget="tt.ImgWidget">Orange</div>
+                    <div class="dragitem" widget="tt.ImgWidget">ImgWidget</div>
                 </div>
             </div>
             <div title="Title2" style="padding:10px;">

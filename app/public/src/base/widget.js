@@ -19,9 +19,11 @@ tt._widgetBaseApi = {
                 break;
             case self.SELECTED_STATE_WHEN_ADD_WIDGET :
                 self._borderNode.setVisible(true);
+                tt.createCompPanels(self);
                 break;
             case self.SELECTED_STATE_SELECTED :
                 self._borderNode.setVisible(true);
+                tt.createCompPanels(self);
                 break;
         }
     },
