@@ -11,13 +11,15 @@
     "jsList"        : [
         "src/cc.js",
         "src/tt.js",
-        "src/base/widget.js",
-        "src/base/widgetEvent.js",
-        "src/node/RectNode.js",
-        "src/node/BorderNode.js",
-        "src/widget/ImgWidget.js",
-        "src/widget/World2d.js",
-        "src/comp/InputComp.js",
-        "src/comp/bindComp.js"
+        "src/base/ttWidget.js",
+        "src/base/ttWidgetEvent.js",
+        "src/node/TTRectNode.js",
+        "src/node/TTBorderNode.js",
+        "src/widget/TTImgWidget.js",
+        "src/widget/TTWorld2d.js",
+        "src/comp/TTComp.js",
+        "src/comp/TTInputComp.js",
+        "src/comp/TTColorComp.js",
+        "src/comp/ttCompBinder.js"
     ]
 }
