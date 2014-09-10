@@ -1,0 +1,17 @@
+{
+    "module" : {
+        "default" : [
+            "tt.js",
+            "base/ttWidget.js",
+            "base/ttWidgetEvent.js",
+            "node/TTRectNode.js",
+            "node/TTBorderNode.js",
+            "widget/TTImgWidget.js",
+            "widget/TTWorld2d.js",
+            "comp/TTComp.js",
+            "comp/TTInputComp.js",
+            "comp/TTColorComp.js",
+            "comp/ttCompBinder.js"
+        ]
+    }
+}

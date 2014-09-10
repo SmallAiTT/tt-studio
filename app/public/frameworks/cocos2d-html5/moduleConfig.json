@@ -39,9 +39,10 @@
         ],
         "core" : [
             "CCDebugger.js",
+            "custom/cc.js",
             "cocos2d/core/utils/BinaryLoader.js",
             "Base64Images.js",
-            "tt/CCClass2.js",
+            "custom/CCClass.js",
             "cocos2d/core/platform/CCCommon.js",
             "cocos2d/core/cocoa/CCGeometry.js",
             "cocos2d/core/platform/CCSAXParser.js",

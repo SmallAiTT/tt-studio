@@ -8,6 +8,12 @@
 
     "modules"       : ["cocos2d"],
 
+    "userModules" : [
+        {
+            "dir" : "../../frameworks/tt"
+        }
+    ],
+
     "jsList"        : [
         "src/cc.js",
         "src/tt.js",
