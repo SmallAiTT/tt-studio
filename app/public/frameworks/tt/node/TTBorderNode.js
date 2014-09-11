@@ -1,5 +1,5 @@
 tt.BorderNode = tt.RectNode.extend({
-    __className : "tt_BorderNode",
+    __className : "TTBorderNode",
 
     _selectedState : 0,//0：未选中，1：拖拽添加的控件时选中，2：点击时选中
     setSelectedState : function(state){

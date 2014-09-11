@@ -1,4 +1,6 @@
 tt.InputComp = tt.Comp.extend({
+    __className : "TTInputComp",
+
     _createEle : function(){
         var self = this;
         var cfg = self._cfg;
