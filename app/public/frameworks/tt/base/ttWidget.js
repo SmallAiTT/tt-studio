@@ -1,5 +1,6 @@
 tt._widgetBaseApi = {
     _borderNode : null,
+    _panels : [],
     _selectedState : 0,//0：未选中，1：拖拽添加的控件时选中，2：点击时选中
     onEnter : function(){
         if(this._super) this._super.apply(this, arguments);
@@ -19,17 +20,24 @@ tt._widgetBaseApi = {
                 break;
             case self.SELECTED_STATE_WHEN_ADD_WIDGET :
                 self._borderNode.setVisible(true);
-                tt.createCompPanels(self);
+                tt.inputMgr.resetPanels(self._panels, self);
                 break;
             case self.SELECTED_STATE_SELECTED :
                 self._borderNode.setVisible(true);
-                tt.createCompPanels(self);
+                tt.inputMgr.resetPanels(self._panels, self);
                 break;
         }
     },
     _initBorder : function(){
         this._borderNode = tt.BorderNode.create(this);
         this.addChild(this._borderNode);
+    },
+    setProp : function(propName, value){
+        this[propName] = value;
+    },
+    setProp4Oper : function(propName, value){
+        tt.inputMgr.notifyPropFromWidget(propName, value);
+        this[propName] = value;
     }
 };
 tt._widgetBaseApi_const = {
@@ -122,5 +130,3 @@ tt.scheduleForEditor = function(){
         }
     }, tt);
 }
-
-

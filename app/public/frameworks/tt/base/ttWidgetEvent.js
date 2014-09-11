@@ -2,7 +2,7 @@
 tt.createMouseEvent = function(){
     var listener = cc.EventListener.create({
         event: cc.EventListener.MOUSE,
-        onMouseDown: function(event){tt._widgetOnMouseDown
+        onMouseDown: function(event){
             var target = event.getCurrentTarget();
             var locationInNode = target.convertToNodeSpace(event.getLocation());
             if (tt.isEventIn(event, locationInNode)) {
@@ -36,7 +36,8 @@ tt.createMouseEvent = function(){
                     var loc = tt._widgetOnMouseDownLoc;
                     var size = widgetOnMouseDown.getContentSize();
                     var newPos = cc.p(locationInNode.x + ((size.width/2) - loc.x), locationInNode.y + ((size.height/2) - loc.y))
-                    widgetOnMouseDown.setPosition(newPos);
+                    widgetOnMouseDown.setProp4Oper("x", newPos.x);
+                    widgetOnMouseDown.setProp4Oper("y", newPos.y);
                 }
             }
         },

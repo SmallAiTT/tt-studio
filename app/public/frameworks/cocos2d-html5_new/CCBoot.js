@@ -2219,8 +2219,9 @@ cc.game = /** @lends cc.game# */{
             var cfgList = [obj];
             cc.moduleLoader.loadWithImg(cfgList, function(err){
                 if (err) throw err;
-                self._prepared = true;
-                cc.moduleLoader.loadWithImg(config["userModules"] || [], function(){
+                cc.moduleLoader.loadWithImg(config["userModules"] || [], function(err){
+                    if (err) throw err;
+                    self._prepared = true;
                     if (cb) cb();
                 });
             });

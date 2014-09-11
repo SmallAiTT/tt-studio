@@ -11,7 +11,7 @@
             "comp/TTComp.js",
             "comp/TTInputComp.js",
             "comp/TTColorComp.js",
-            "comp/ttCompBinder.js"
+            "pipe/TTInputMgr.js"
         ]
     }
 }
