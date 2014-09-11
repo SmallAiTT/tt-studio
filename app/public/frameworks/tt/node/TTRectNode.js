@@ -1,3 +1,4 @@
+cc.NodeRGBA = cc.NodeRGBA || cc.Node;
 tt.RectNode = cc.NodeRGBA.extend({
     __className : "TTCircleNode",
 

@@ -439,7 +439,7 @@ cc.inputManager = /** @lends cc.inputManager# */{
                 mouseEvent.setButton(event.button);
                 cc.eventManager.dispatchEvent(mouseEvent);
 
-                event.stopPropagation();
+//                event.stopPropagation();
                 event.preventDefault();
                 element.focus();
             }, false);
@@ -457,7 +457,7 @@ cc.inputManager = /** @lends cc.inputManager# */{
                 mouseEvent.setButton(event.button);
                 cc.eventManager.dispatchEvent(mouseEvent);
 
-                event.stopPropagation();
+//                event.stopPropagation();
                 event.preventDefault();
             }, false);
 
@@ -478,7 +478,7 @@ cc.inputManager = /** @lends cc.inputManager# */{
                     mouseEvent.setButton(null);
                 cc.eventManager.dispatchEvent(mouseEvent);
 
-                event.stopPropagation();
+//                event.stopPropagation();
                 event.preventDefault();
             }, false);
 
@@ -491,7 +491,7 @@ cc.inputManager = /** @lends cc.inputManager# */{
                 mouseEvent.setScrollData(0, event.wheelDelta);
                 cc.eventManager.dispatchEvent(mouseEvent);
 
-                event.stopPropagation();
+//                event.stopPropagation();
                 event.preventDefault();
             }, false);
 
@@ -505,7 +505,7 @@ cc.inputManager = /** @lends cc.inputManager# */{
                 mouseEvent.setScrollData(0, event.detail * -120);
                 cc.eventManager.dispatchEvent(mouseEvent);
 
-                event.stopPropagation();
+//                event.stopPropagation();
                 event.preventDefault();
             }, false);
         }
@@ -526,7 +526,7 @@ cc.inputManager = /** @lends cc.inputManager# */{
                         pos.top -= document.documentElement.scrollTop;
 
                         _touchEvent.call(selfPointer, [selfPointer.getTouchByXY(event.clientX, event.clientY, pos)]);
-                        event.stopPropagation();
+//                        event.stopPropagation();
                     }, false);
                 })(eventName, _pointerEventsMap[eventName]);
             }
@@ -541,7 +541,7 @@ cc.inputManager = /** @lends cc.inputManager# */{
                 pos.left -= document.body.scrollLeft;
                 pos.top -= document.body.scrollTop;
                 selfPointer.handleTouchesBegin(selfPointer.getTouchesByEvent(event, pos));
-                event.stopPropagation();
+//                event.stopPropagation();
                 event.preventDefault();
                 element.focus();
             }, false);
@@ -553,7 +553,7 @@ cc.inputManager = /** @lends cc.inputManager# */{
                 pos.left -= document.body.scrollLeft;
                 pos.top -= document.body.scrollTop;
                 selfPointer.handleTouchesMove(selfPointer.getTouchesByEvent(event, pos));
-                event.stopPropagation();
+//                event.stopPropagation();
                 event.preventDefault();
             }, false);
 
@@ -564,7 +564,7 @@ cc.inputManager = /** @lends cc.inputManager# */{
                 pos.left -= document.body.scrollLeft;
                 pos.top -= document.body.scrollTop;
                 selfPointer.handleTouchesEnd(selfPointer.getTouchesByEvent(event, pos));
-                event.stopPropagation();
+//                event.stopPropagation();
                 event.preventDefault();
             }, false);
 
@@ -575,7 +575,7 @@ cc.inputManager = /** @lends cc.inputManager# */{
                 pos.left -= document.body.scrollLeft;
                 pos.top -= document.body.scrollTop;
                 locView.handleTouchesCancel(selfPointer.getTouchesByEvent(event, pos));
-                event.stopPropagation();
+//                event.stopPropagation();
                 event.preventDefault();
             }, false);
         }
