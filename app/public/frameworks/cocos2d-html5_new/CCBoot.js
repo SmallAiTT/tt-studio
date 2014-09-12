@@ -2167,28 +2167,6 @@ cc.game = /** @lends cc.game# */{
         cc._initSys(self.config, CONFIG_KEY);
     },
 
-    //cache for js and module that has added into jsList to be loaded.
-    _jsAddedCache: {},
-    _getJsListOfModule: function (moduleMap, moduleName, dir) {
-        var jsAddedCache = this._jsAddedCache;
-        if (jsAddedCache[moduleName]) return null;
-        dir = dir || "";
-        var jsList = [];
-        var tempList = moduleMap[moduleName];
-        if (!tempList) throw "can not find module [" + moduleName + "]";
-        var ccPath = cc.path;
-        for (var i = 0, li = tempList.length; i < li; i++) {
-            var item = tempList[i];
-            if (jsAddedCache[item]) continue;
-            var extname = ccPath.extname(item);
-            if (!extname) {
-                var arr = this._getJsListOfModule(moduleMap, item, dir);
-                if (arr) jsList = jsList.concat(arr);
-            } else if (extname.toLowerCase() == ".js") jsList.push(ccPath.join(dir, item));
-            jsAddedCache[item] = 1;
-        }
-        return jsList;
-    },
     /**
      * Prepare game.
      * @param cb
